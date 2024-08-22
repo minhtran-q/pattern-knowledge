@@ -93,3 +93,5 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 | OPTIONS               | Used to determine the supported methods and options for a resource.     |
 
 </details>
+
+## Microservice
