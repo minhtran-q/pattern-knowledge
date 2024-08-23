@@ -103,6 +103,16 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
+### Database in Microservice architecture
+
+<details>
+  <summary>Key Principles for designing databases in Microservice architecture</summary>
+  <br/>
+
+  **Database per Service:** Each microservice has its own dedicated database
+
+</details>
+
 ### Microservice Communication Patterns
 <details>
   <summary>Type of Communication Patterns</summary>
