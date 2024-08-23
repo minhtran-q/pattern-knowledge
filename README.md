@@ -113,6 +113,13 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
+<details>
+  <summary>Patterns for designing databases in Microservice architecture</summary>
+  <br/>
+
+
+</details>
+
 ### Microservice Communication Patterns
 <details>
   <summary>Type of Communication Patterns</summary>
