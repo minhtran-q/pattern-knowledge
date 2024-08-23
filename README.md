@@ -108,6 +108,6 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   + Sync blocking
     + Request response
    
-  !()[/images/communication_patterns.png]
+  ![communication_patterns](/images/communication_patterns.png)
 
 </details>
