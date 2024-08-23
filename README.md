@@ -95,8 +95,15 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 ## Microservice
-### Microservice Communication Patterns
+<details>
+  <summary>Microservice architecture</summary>
+  <br/>
 
+  Microservice architecture is an architectural style that structures an application as a collection of small, independent services. Each service is created independently, and each one runs a unique process and usually manages its own database. 
+
+</details>
+
+### Microservice Communication Patterns
 <details>
   <summary>Type of Communication Patterns</summary>
   <br/>
