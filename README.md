@@ -96,3 +96,16 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 ## Microservice
 ### Microservice Communication Patterns
+
+<details>
+  <summary>Type of Communication Patterns</summary>
+  <br/>
+
+  + Asyn non-blocking
+    + Share data
+    + Event driven
+    + Request response
+  + Sync blocking
+    + Request response
+
+</details>
