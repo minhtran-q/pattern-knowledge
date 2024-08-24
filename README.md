@@ -110,6 +110,18 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>Pros and Cons</summary>
   <br/>
 
+  _Pros:_
+  + **Scalability:** Microservices allow for independent scaling of individual services based on demand.
+  + **Resilience:** The isolation of services reduces the impact of failures, as a failure in one service.
+  + **Flexibility:** Microservices enable the use of different technologies and frameworks for each service.
+  + **Maintainability:** Smaller, focused services are generally easier to understand, develop, and maintain.
+  + **Continuous delivery:** Microservices can be deployed and updated independently.
+  
+  _Cons:_
+  + **Complexity:** Managing multiple services can be more complex.
+  + **Distributed systems challenges:** Communication between services can introduce latency and complexity.
+  + **Testing and debugging:** Testing and debugging distributed systems can be challenging.
+  + **Data consistency:** Ensuring data consistency across multiple services can be difficult.
   
 </details>
 
