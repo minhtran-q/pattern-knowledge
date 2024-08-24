@@ -101,7 +101,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
   Microservice architecture is an architectural style that structures an application as a collection of small, independent services. Each service is created independently, and each one runs a unique process and usually manages its own database. 
 
-  **Core principle:** Breaking down a large application into smaller, independent
+  **Core principle:** Breaking down a large application into smaller, independent services.
 
 </details>
 
