@@ -95,6 +95,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 ## Microservice
+### Fundamental concept
 <details>
   <summary>Microservice architecture</summary>
   <br/>
@@ -104,6 +105,14 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   **Core principle:** Breaking down a large application into smaller, independent services.
 
 </details>
+
+<details>
+  <summary>Pros and Cons</summary>
+  <br/>
+
+  
+</details>
+
 
 ### Database in Microservice architecture
 
