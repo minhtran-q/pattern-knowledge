@@ -158,3 +158,5 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   ![communication_patterns](/images/communication_patterns.png)
 
 </details>
+
+## Event Sourcing
