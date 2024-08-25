@@ -160,3 +160,9 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 ## Event Sourcing
+### Fundamental concept
+<details>
+  <summary>Event Sourcing pattern</summary>
+  <br/>
+
+</details>
