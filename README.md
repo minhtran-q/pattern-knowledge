@@ -105,6 +105,23 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   + It’s possible to use a `Resource` in conjunction with other Spring abstractions.
   + It’s easier to mock.
 
+  _Example:_
+  ```
+      @GetMapping("/{id}")
+    public ResponseEntity<InputStreamResource> getFile(@PathVariable Long id) {
+        InputStreamResource fileStream = fileService.getFileAsStream(id);
+
+        if (fileStream != null) {
+            Optional<FileEntity> fileEntityOptional = fileService.getFile(id);
+            FileEntity fileEntity = fileEntityOptional.get();
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + fileEntity.getFileName() + "\"")
+                    .body(fileStream);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+  ```
 </details>
 
 ## Microservice
