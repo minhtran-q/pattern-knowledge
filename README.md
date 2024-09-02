@@ -94,7 +94,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
-### Read file or image with REST
+### Additional tips when creating APIs
 
 <details>
   <summary>Read file with Resource</summary>
