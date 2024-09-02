@@ -94,6 +94,19 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
+### Read file or image with REST
+
+<details>
+  <summary>Read file with Resource</summary>
+  <br/>
+
+  The `Resource` class is a high-level abstraction provided by Spring. Using a Resource over an InputStream has the following benefits:
+  + `Resource` provides additional metadata about the resource.
+  + It’s possible to use a `Resource` in conjunction with other Spring abstractions.
+  + It’s easier to mock.
+
+</details>
+
 ## Microservice
 ### Fundamental concept
 <details>
