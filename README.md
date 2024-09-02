@@ -107,7 +107,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
   _Example:_
   ```
-      @GetMapping("/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<InputStreamResource> getFile(@PathVariable Long id) {
         InputStreamResource fileStream = fileService.getFileAsStream(id);
 
