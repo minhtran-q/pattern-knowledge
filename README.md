@@ -163,6 +163,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
    
   
 </details>
+
 ### Database in Microservice architecture
 
 <details>
