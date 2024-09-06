@@ -155,7 +155,14 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   
 </details>
 
+<details>
+  <summary>Reliable communication between microservices</summary>
+  <br/>
 
+  Reliable communication between microservices ensures that messages are delivered accurately and timely, even in the face of failures or network issues. To archive **Reliable communication** we can use _messaging system_ like RabbitMQ, Apache Kafka. They aslo support **Idempotency**.
+   
+  
+</details>
 ### Database in Microservice architecture
 
 <details>
