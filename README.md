@@ -204,3 +204,5 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <br/>
 
 </details>
+
+## Resilience
