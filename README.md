@@ -206,3 +206,5 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 ## Resilience
+### Circuit Breaker
+### Retry
