@@ -181,8 +181,6 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
-### Saga pattern
-
 ### Microservice Communication Patterns
 <details>
   <summary>Type of Communication Patterns</summary>
@@ -198,6 +196,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   ![communication_patterns](/images/communication_patterns.png)
 
 </details>
+
+### Saga pattern
 
 ## Event Sourcing
 ### Fundamental concept
