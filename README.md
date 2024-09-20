@@ -181,6 +181,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
+### Saga pattern
+
 ### Microservice Communication Patterns
 <details>
   <summary>Type of Communication Patterns</summary>
