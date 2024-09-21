@@ -236,6 +236,11 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <br/>
 
 </details>
+<details>
+  <summary>Eventual Consistency vs Strong Consistency</summary>
+  <br/>
+
+</details>
 
 ## Resilience
 ### Circuit Breaker
