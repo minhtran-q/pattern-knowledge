@@ -124,7 +124,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   ```
 </details>
 
-## Microservice
+## Microservice Architecture
 ### Fundamental concept
 <details>
   <summary>Microservice architecture</summary>
@@ -197,14 +197,15 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 </details>
 
-### Saga pattern
-
-### Event Sourcing
+### Event Sourcing Pattern
 <details>
   <summary>Event Sourcing pattern</summary>
   <br/>
 
 </details>
+
+### Saga Pattern
+
 
 ## Resilience
 ### Circuit Breaker
