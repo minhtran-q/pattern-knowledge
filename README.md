@@ -179,6 +179,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   
 </details>
 
+### Event-Driven Architecture
+
 ### Event Sourcing Pattern
 <details>
   <summary>Event Sourcing pattern</summary>
