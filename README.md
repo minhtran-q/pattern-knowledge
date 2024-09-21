@@ -231,6 +231,11 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <br/>
 
 </details>
+<details>
+  <summary>Two-Phase Commit vs Saga Pattern</summary>
+  <br/>
+
+</details>
 
 ## Resilience
 ### Circuit Breaker
