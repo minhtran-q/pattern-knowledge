@@ -199,8 +199,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 ### Saga pattern
 
-## Event Sourcing
-### Fundamental concept
+### Event Sourcing
 <details>
   <summary>Event Sourcing pattern</summary>
   <br/>
