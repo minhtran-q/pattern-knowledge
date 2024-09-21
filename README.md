@@ -179,7 +179,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   
 </details>
 
-### CQRS Pattern
+### The command query responsibility segregation (CQRS) Pattern
 
 ### Event-Driven Architecture
 
