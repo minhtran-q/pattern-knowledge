@@ -179,6 +179,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   
 </details>
 
+### CQRS Pattern
+
 ### Event-Driven Architecture
 
 ### Event Sourcing Pattern
