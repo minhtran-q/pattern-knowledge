@@ -209,7 +209,28 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 ### Saga Pattern
+<details>
+  <summary>What is Saga Pattern</summary>
+  <br/>
 
+  **Types of Saga Pattern**
+
+  There are two types of Saga Pattern:
+
+  + Saga Choreography Pattern
+  + Saga Orchestration Pattern
+  
+</details>
+<details>
+  <summary>Saga Choreography Pattern</summary>
+  <br/>
+
+</details>
+<details>
+  <summary>Saga Orchestration Pattern</summary>
+  <br/>
+
+</details>
 
 ## Resilience
 ### Circuit Breaker
