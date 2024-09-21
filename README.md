@@ -156,6 +156,21 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 </details>
 
 <details>
+  <summary>Type of Communication Patterns</summary>
+  <br/>
+
+  + Asyn non-blocking
+    + Share data
+    + Event driven
+    + Request response
+  + Sync blocking
+    + Request response
+   
+  ![communication_patterns](/images/communication_patterns.png)
+
+</details>
+
+<details>
   <summary>Reliable communication between microservices</summary>
   <br/>
 
@@ -178,22 +193,6 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>Patterns for designing databases in Microservice architecture</summary>
   <br/>
 
-
-</details>
-
-### Microservice Communication Patterns
-<details>
-  <summary>Type of Communication Patterns</summary>
-  <br/>
-
-  + Asyn non-blocking
-    + Share data
-    + Event driven
-    + Request response
-  + Sync blocking
-    + Request response
-   
-  ![communication_patterns](/images/communication_patterns.png)
 
 </details>
 
