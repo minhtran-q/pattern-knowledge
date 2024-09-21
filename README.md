@@ -183,6 +183,24 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
 ### Event-Driven Architecture
 
+<details>
+  <summary>What is Event-Driven Architecture</summary>
+  <br/>
+
+  Event-Driven Architecture is a software architectural pattern where components or services communicate primarily by producing and consuming events.
+  
+</details>
+<details>
+  <summary>Key concepts of EDA</summary>
+  <br/>
+
+  + **Event:** A representation of a specific occurrence or action.
+  + **Producer:** A component that generates events.
+  + **Consumer:** A component that processes events.
+  + **Message Broker:** A middleware system that manage communication between producers and consumers by handling event routing, storage, and delivery.
+  
+</details>
+
 ### Event Sourcing Pattern
 <details>
   <summary>Event Sourcing pattern</summary>
