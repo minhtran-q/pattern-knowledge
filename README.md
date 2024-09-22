@@ -213,6 +213,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>What is Saga Pattern</summary>
   <br/>
 
+  The Saga pattern is a design pattern used to manage data consistency across microservices in distributed transaction scenarios. The Saga architecture pattern provides transaction management using a sequence of local transactions.
+
   **Types of Saga Pattern**
 
   There are two types of Saga Pattern:
@@ -222,8 +224,21 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   
 </details>
 <details>
+  <summary>Saga terminology</summary>
+  <br/>
+
+  + **Sequence of Local Transactions:** A saga is incluled of multiple local transactions. Each transaction updates the database and triggers the next transaction through a message or event.
+  + **Compensating Transactions:** If a transaction fails, the saga executes compensating transactions to undo the changes made by previous transactions, ensuring data consistency.
+  + **Choreography vs. Orchestration:** There are two main approaches to implementing the Saga pattern.
+  
+</details>
+<details>
   <summary>Saga Choreography Pattern</summary>
   <br/>
+
+  The Choreography Saga pattern is a way to manage distributed transactions across multiple microservices without a central coordinator.
+
+  
 
 </details>
 <details>
