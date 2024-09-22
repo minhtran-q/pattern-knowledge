@@ -268,6 +268,17 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>Two-Phase Commit vs Saga Pattern</summary>
   <br/>
 
+  2PC is suitable for scenarios requiring strict consistency, while Saga is better for systems where availability and resilience are more critical.
+
+  **Two-Phase Commit:**
+
+  + Strong Consistency: Ensures all participating nodes either commit or roll back a transaction, maintaining a consistent state across the system.
+  + Synchronous: All participants must be available and agree to commit or roll back, which can lead to blocking if any participant is slow or fails
+
+  **Saga Pattern:**
+
+  **Eventual Consistency:** Ensures that the system will eventually reach a consistent state, but not necessarily immediately.
+  **Asynchronous:** Transactions are processed asynchronously, which can improve system availability and reduce blocking.
 </details>
 <details>
   <summary>Eventual Consistency vs Strong Consistency</summary>
