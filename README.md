@@ -236,7 +236,7 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>Saga Choreography Pattern</summary>
   <br/>
 
-  The Choreography Saga pattern is a way to manage distributed transactions across multiple microservices without a central coordinator.
+  The Choreography Saga pattern is a way to manage distributed transactions across multiple microservices **without** a central coordinator.
 
   ![communication_patterns](/images/saga-choreography.png)
 
@@ -255,6 +255,14 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
   <summary>Saga Orchestration Pattern</summary>
   <br/>
 
+  The Saga orchestration pattern is a design pattern used to manage data consistency across microservices in distributed transaction scenarios. A single orchestrator is responsible for managing the overall transaction status.
+
+  + **Orchestrator:** A central coordinator that manages the sequence of transactions.
+  + **Local Transactions:** Each service performs its own transaction and then triggers the next step.
+  + **Compensating Transactions:** If a step fails, the orchestrator triggers compensating transactions to undo the changes made by previous steps.
+
+  ![communication_patterns](/images/saga-orchestration.png)
+  
 </details>
 <details>
   <summary>Two-Phase Commit vs Saga Pattern</summary>
