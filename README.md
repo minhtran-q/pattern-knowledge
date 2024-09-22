@@ -238,7 +238,17 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 
   The Choreography Saga pattern is a way to manage distributed transactions across multiple microservices without a central coordinator.
 
-  
+  ![communication_patterns](/images/saga-choreography.png)
+
+  + The order service runs a local transaction, T1, which atomically updates the database and publishes an Order placed message to the message broker.
+  + The inventory service subscribes to the order service messages and receives the message that an order has been created.
+  + The inventory service runs a local transaction, T2, which atomically updates the database and publishes an Inventory updated message to the message broker.
+  + The payment service subscribes to the messages from the inventory service and receives the message that the inventory has been updated.
+  + The payment service runs a local transaction, T3, which atomically updates the database with payment details and publishes a Payment processed message to the message broker.
+
+  _Compensating transaction:_ 
+  + If the payment fails, the payment service runs a compensatory transaction, C1, which atomically reverts the payment in the database and publishes a Payment failed message to the message broker.
+  + The compensatory transactions C2 and C3 are run to restore data consistency.
 
 </details>
 <details>
