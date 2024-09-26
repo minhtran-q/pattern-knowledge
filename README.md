@@ -85,7 +85,8 @@ DELETE	/device-management/devices/{id}   : Delete device by "id"
 public class GoldController {
 
   @GetMapping
-  public Page<GoldRequest> getAllGold(@PageableDefault(page = 0, size = 10, sort = "name", direction = Sort.Direction.DESC) Pageable pageable) {
+  public Page<GoldRequest> getAllGold(
+@PageableDefault(page = 0, size = 10, sort = "name", direction = Sort.Direction.DESC) Pageable pageable) {
     return goldService.getAllGold(pageable);
   }
 
