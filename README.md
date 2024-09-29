@@ -508,6 +508,8 @@ public class GoldController {
   
   **Lambda Function with Presigned URLs**
 
+  ![](/images/presigned-url-s3-gateway-limit-upload-file.png)
+
   We can use lambda function to generate the **presigned URLs** to upload file directly to S3.
 
   Presigned URLs allow you to grant temporary access to objects in your Amazon S3 bucket without exposing your AWS credentials. These URLs are time-limited and can be used to upload or download files securely.
@@ -521,5 +523,22 @@ public class GoldController {
   _Note:_ We also use **S3 accelerator** + **multipart file upload** to optimize uploading performance.
 
   **Upload zipped file as the payload**
+  
+</details>
+
+<details>
+  <summary>Optimize a slow API</summary>
+  <br/>
+
+  There are several strategies to optimze slow API;
+
+  + **Caching:** Implement caching mechanisms to store frequently requested data. This reduces the need to repeatedly fetch the same data from the server.
+  + **Database Optimization:** Use indexing, avoid unnecessary joins.
+  + **Asynchronous Processing:** 
+  + **Load Balancing:** 
+
+  If you’re using **AWS API Gateway**, there are several specific optimizations you can implement to improve the performance of your API:
+  + **Enable Caching:** Use API Gateway’s built-in caching to store responses for a specified TTL (Time to Live).
+  + **Enable Compression:** Enable payload compression in API Gateway to reduce the size of the data transferred. Help Faster data transfer and reduced bandwidth usage.
   
 </details>
