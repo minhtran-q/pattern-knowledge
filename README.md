@@ -234,7 +234,7 @@ public class GoldController {
 
   CQRS stands for Command Query Responsibility Segregation. It’s a design pattern separates the responsibility for handling write operations (_command_) and read operations (_query_). CQRS separates reads and writes into _different databases_, **Commands** performs update data, **Queries** performs read data.
 
-  
+  ![](/images/cqrs.png)
   
 </details>
 
@@ -358,7 +358,46 @@ public class GoldController {
 </details>
 
 ## Resilience
+
+<details>
+  <summary>What is Resilience</summary>
+  <br/>
+
+  Resilience in microservices refers to the ability of an application to withstand failures and continue to operate smoothly.
+
+</details>
+
+<details>
+  <summary>What is Resilience</summary>
+  <br/>
+
+  Resilience in microservices refers to the ability of an application to withstand failures and continue to operate smoothly.
+
+</details>
+
 ### Circuit Breaker
+<details>
+  <summary>What is Circuit Breakers</summary>
+  <br/>
+
+  A circuit breaker is a design pattern used in microservices architecture to prevent cascading failures and provide fallback mechanisms.
+
+  
+
+  For example: We have a payment system that processes millions of payments every day, and every time a payment fails it sends an email and tries again. If it weren't use the circuit breaker. It would overload the mail server. Bring down the whole system.
+
+</details>
+
+<details>
+  <summary>How does it work?</summary>
+  <br/>
+
+  + **Closed State:** Initially, the circuit breaker is in a closed state. Requests are allowed to pass through to the service.
+  + **Open State:** If the service fails a certain number of times within a specified time window, the circuit breaker will transit to an open state. This means that next requests are immediately rejected without trying to contact the service.
+  + **Half-Open State:** After a predefined timeout, the circuit breaker moves to a half-open state. A single request is allowed to pass through. If the request is successful, the circuit breaker returns to the closed state. If the request fails, the circuit breaker remains open for another timeout period.
+
+</details>
+
 ### Retry
 
 ## Common experience design
