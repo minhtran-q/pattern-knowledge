@@ -230,6 +230,23 @@ public class GoldController {
 </details>
 
 <details>
+  <summary>When to use REST and when to use Event-Driven in Microservice Architecture</summary>
+  <br/>
+
+  **When to Use REST:**
+  + **Simple CRUD Operations:** If your microservices need to perform basic Create, Read, Update, and Delete operations.
+  + **Synchronous Communication:** When you need immediate responses from your services.
+  + **Ease of Implementation:** REST is easier to implement and understand, making it a good choice for simpler applications
+
+  **When to Use REST:**
+  + **Asynchronous Processing:** If your services need to process tasks asynchronously, allowing them to continue working without waiting for a response.
+  + **High Scalability:** When you need to handle a large volume of events and scale your services independently.
+  + **Decoupling Services:** If you want to decouple your services to reduce dependencies and improve fault tolerance.
+  + **Complex Workflows:** When your application requires complex workflows that involve multiple services
+
+</details>
+
+<details>
   <summary>Type of Communication Patterns</summary>
   <br/>
 
