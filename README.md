@@ -388,6 +388,7 @@ public class GoldController {
   + **Half-Open State:** After a predefined timeout, the circuit breaker moves to a half-open state. A single request is allowed to pass through. If the request is successful, the circuit breaker returns to the closed state. If the request fails, the circuit breaker remains open for another timeout period.
 
 </details>
+
 ### Retry pattern
 <details>
   <summary>What is Retry pattern?</summary>
@@ -414,6 +415,25 @@ public class GoldController {
   + _Second Retry:_ If the second attempt fails, the microservice waits for a longer delay (e.g., 4 seconds) before retrying again.
   + _Subsequent Retries:_ The delay between retries continues to increase (e.g., 16 seconds, 64 seconds, etc.) until a maximum number of retries is reached. (_Exponential Backoff_)
 
+</details>
+
+### Rate limiter
+
+<details>
+  <summary>What is Rate limiter?</summary>
+  <br/>
+
+  A rate limiter is a mechanism that controls the rate at which requests are processed. A rate limiter is a mechanism that controls the rate at which requests are processed. It's designed to prevent excessive load on a system.
+  
+</details>
+<details>
+  <summary>How does it work?</summary>
+  <br/>
+
+  A rate limiter sets a limit on the number of requests that can be processed within a specific time window. When the rate limit is reached, subsequent requests are rejected
+
+  _Example:_ A popular e-commerce website receives a huge of traffic during a sale. The API gateway enforces a rate limit on the number of requests per user or per IP address. This prevents a small number of users from overwhelming the backend services.
+  
 </details>
 
 ## Common experience design
