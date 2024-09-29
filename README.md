@@ -204,9 +204,18 @@ public class GoldController {
   <summary>Microservice architecture</summary>
   <br/>
 
-  Microservice architecture is an architectural style that structures an application as a collection of small, independent services. Each service is created independently, and each one runs a unique process and usually manages its own database. 
+  Microservice architecture is an architectural style that structures an application as a collection of services. Each service is created independently, and each one runs a unique process and usually manages its own database. 
 
   **Core principle:** Breaking down a large application into smaller, independent services.
+
+  _Example:_
+Imagine an e-commerce application. In a monolithic architecture, all functionalities like user management, product catalog, order processing, and payment would be part of a single codebase. In a microservice architecture, these functionalities would be split into separate services: _User Service_, _Product Service_, _Order Service_, _Payment Service_
++ User Service: Manages user accounts and authentication.
++ Product Service: Handles product catalog and inventory.
++ Order Service: Manages order processing and tracking.
++ Payment Service: Handles payment processing.
+
+Each service can be developed, deployed, and scaled independently. 
 
 </details>
 
