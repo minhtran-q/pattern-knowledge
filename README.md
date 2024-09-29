@@ -532,13 +532,13 @@ public class GoldController {
 
   There are several strategies to optimze slow API;
 
-  + **Caching:** Implement caching mechanisms to store frequently requested data. This reduces the need to repeatedly fetch the same data from the server.
-  + **Database Optimization:** Use indexing, avoid unnecessary joins.
-  + **Asynchronous Processing:** 
-  + **Load Balancing:** 
-
   If you’re using **AWS API Gateway**, there are several specific optimizations you can implement to improve the performance of your API:
   + **Enable Caching:** Use API Gateway’s built-in caching to store responses for a specified TTL (Time to Live).
   + **Enable Compression:** Enable payload compression in API Gateway to reduce the size of the data transferred. Help Faster data transfer and reduced bandwidth usage.
+
+  And in the application
+  + **Caching:** Implement caching mechanisms to store frequently requested data. This reduces the need to repeatedly fetch the same data from the server.
+  + **Asynchronous Processing:** Use `CompletableFuture` to handle multiple tasks.
+  + **Database Optimization:** Use indexing, avoid unnecessary joins, avoid N + 1 query problems.
   
 </details>
