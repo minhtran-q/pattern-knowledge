@@ -233,7 +233,23 @@ public class GoldController {
   <br/>
 
   CQRS stands for Command Query Responsibility Segregation. It’s a design pattern separates the responsibility for handling write operations (_command_) and read operations (_query_). CQRS separates reads and writes into _different databases_, **Commands** performs update data, **Queries** performs read data.
+
   
+  
+</details>
+
+<details>
+  <summary>How to Sync Databases with CQRS ?</summary>
+  <br/>
+
+  When we separate read and write databases in 2 different database, the main consideration is sync these two database in a proper way. So we should sync these 2 databases and keep sync always. There are several ways: 
+
+  _Event-Driven Architecture_
+  According to Event Driven Architecture, when something update in write database, it will publish an update event with using message broker systems and this will consume by the read database and sync data according to latest changes.
+
+  _Change Data Capture (CDC)_
+  Captures changes made to the write database and propagates them to the read database. Tools like Debezium or database triggers can be used to capture changes and publish them to a message broker like Kafka.
+
 </details>
 
 ### Event-Driven Architecture
