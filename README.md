@@ -474,7 +474,7 @@ public class GoldController {
   4. The presigned URL is returned to the client.
   5. The client uses the presigned URL to upload or download the file.
 
-  _Note:_ We also use S3 accelerator + multipart file upload to optimize uploading performance.
+  _Note:_ We also use **S3 accelerator** + **multipart file upload** to optimize uploading performance.
 
   **Upload zipped file as the payload**
   
