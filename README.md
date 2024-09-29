@@ -228,6 +228,14 @@ public class GoldController {
 
 ### Command Query Responsibility Segregation (CQRS) Pattern
 
+<details>
+  <summary>What is CQRS</summary>
+  <br/>
+
+  CQRS stands for Command Query Responsibility Segregation. It’s a design pattern separates the responsibility for handling write operations (_command_) and read operations (_query_). CQRS separates reads and writes into _different databases_, **Commands** performs update data, **Queries** performs read data.
+  
+</details>
+
 ### Event-Driven Architecture
 
 <details>
