@@ -250,12 +250,27 @@ public class GoldController {
   <summary>Type of Communication Patterns</summary>
   <br/>
 
-  + Asyn non-blocking
-    + Share data
-    + Event driven
-    + Request response
-  + Sync blocking
-    + Request response
+  **Synchronous Communication:** In synchronous communication, the client sends a request and waits for a response before continuing its process.
+
+  Pros: 
+  + Easier to implement and understand.
+  Cons:
+  + Services are more dependent on each other.
+  + The client has to wait for the response, which can slow down the system.
+  
+  _Example:_ REST
+    
+  **Asynchronous Communication:** In asynchronous communication, the client sends a request and continues its process without waiting for a response. The response is handled separately.
+
+  Pros:
+  + Services are less dependent on each other.
+  + Better suited for handling high loads and distributed systems.  
+
+  Cons:
+  + More challenging to implement and debug.
+  + The system may not be immediately consistent, which can be a drawback for certain applications.
+
+  + _Example:_ Event-Driven Architecture
    
   ![communication_patterns](/images/communication_patterns.png)
 
