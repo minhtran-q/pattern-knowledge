@@ -18,10 +18,8 @@ REST (Representational State Transfer) is an architectural style for designing n
 
   + Client/Server - Client are separated from servers by a well-defined interface.
   + Stateless - each request from the client to the server must contain all of the information necessary to establish and complete a request.
-  + Cacheability - 
-  + Layered System -
+  + Cacheability - Responses must define themselves as cacheable or non-cacheable (`Cache-Control: max-age=3600`  // the header indicates that the response can be cached for 3600)
   + Uniform Interface - The uniform interface includes using standard HTTP verbs (GET, POST, PUT, DELETE, etc.), standard HTTP error responses, and resource identification through URI.
-  + Code on Demand (optional) - 
   
 </details>
 
