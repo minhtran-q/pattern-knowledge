@@ -364,27 +364,18 @@ public class GoldController {
   <br/>
 
   Resilience in microservices refers to the ability of an application to withstand failures and continue to operate smoothly.
-
 </details>
 
-<details>
-  <summary>What is Resilience</summary>
-  <br/>
-
-  Resilience in microservices refers to the ability of an application to withstand failures and continue to operate smoothly.
-
-</details>
-
-### Circuit Breaker
+### Circuit Breaker pattern
 <details>
   <summary>What is Circuit Breakers</summary>
   <br/>
 
   A circuit breaker is a design pattern used in microservices architecture to prevent cascading failures and provide fallback mechanisms.
 
-  
-
   For example: We have a payment system that processes millions of payments every day, and every time a payment fails it sends an email and tries again. If it weren't use the circuit breaker. It would overload the mail server. Bring down the whole system.
+
+  Circuit breakers can provide the best of _both_ sides. The circuit breaker is usually configured on the **client side** (_caller side_).
 
 </details>
 
@@ -397,8 +388,33 @@ public class GoldController {
   + **Half-Open State:** After a predefined timeout, the circuit breaker moves to a half-open state. A single request is allowed to pass through. If the request is successful, the circuit breaker returns to the closed state. If the request fails, the circuit breaker remains open for another timeout period.
 
 </details>
+### Retry pattern
+<details>
+  <summary>What is Retry pattern?</summary>
+  <br/>
 
-### Retry
+  Retry pattern is a strategy in software development that involves reattempting a failed operation after a certain delay. This pattern is often used to handle transient errors or temporary network issues.
+
+  For example, if a network connection is temporarily disrupted, a retry pattern can be used to automatically reattempt the operation after a short delay, increasing the chances of success.
+
+</details>
+<details>
+  <summary>How does it work?</summary>
+  <br/>
+
+  **Initial Request:** When a microservice makes a request to another service, it may encounter an error due to issues like network interruptions.
+  **Retry Logic:** If the initial request fails, the Retry Pattern triggers a retry mechanism. This involves automatically resending the request a specified number of times.
+  **Backoff Strategy:** To prevent overwhelming the system, the retry pattern uses _backoff strategy_. Backoff strategy manage the timing of retry attempts after a failure.
+
+  _Exmaple:_ 
+
+  + The microservice attempts to fetch data from the external API.
+  + The API request fails due to a temporary network issue.
+  + _First Retry:_ The microservice waits for a short delay (e.g., 1 second) and retries the fetch.
+  + _Second Retry:_ If the second attempt fails, the microservice waits for a longer delay (e.g., 4 seconds) before retrying again.
+  + _Subsequent Retries:_ The delay between retries continues to increase (e.g., 16 seconds, 64 seconds, etc.) until a maximum number of retries is reached. (_Exponential Backoff_)
+
+</details>
 
 ## Common experience design
 <details>
