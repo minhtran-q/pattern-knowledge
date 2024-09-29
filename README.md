@@ -2,7 +2,7 @@
 ## REST
 
 ### What is REST
-REST (representational state transfer) is a software architectural style that was created to guide the design and development 
+REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on a stateless, client-server communication protocol, typically HTTP. RESTful applications use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources.
 
 <details>
   <summary>What is a Stateless REST API?</summary>
