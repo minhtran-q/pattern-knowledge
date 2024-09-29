@@ -25,6 +25,33 @@ REST (representational state transfer) is a software architectural style that wa
   
 </details>
 
+<details>
+  <summary>Advantages & Disadvantages of REST</summary>
+  <br/>
+
+  **Advantages of REST:**
+
+  + **Simple and Ease of Use:** REST APIs use standard HTTP methods (GET, POST, PUT, DELETE), making them easy to understand and implement.
+  + **Performance:** RESTful APIs can be cached, which can improve performance and reduce load on the server.
+  + **Flexibility:** RESTful APIs REST APIs can return data in multiple formats, such as JSON, XML, or plain text.
+  + **Scalability:** REST APIs are stateless, meaning each request from a client to server must contain all the information the server needs to fulfill that request. This makes it easier to scale applications horizontally.
+  + **Platform independence:** RESTful APIs are platform-independent, as they can be accessed from any device or programming language.
+
+  _Exmaple:_
+  + _Scalability:_ For example, a social media platform can handle millions of users by distributing requests across multiple servers.
+  + _Flexibility:_ For example, a weather app might use JSON for its mobile app and XML for its web service.
+  + _Caching:_ For instance, a news website can cache the results of popular articles, reducing the load on the server.
+
+  **Disadvantages of REST:**
+
+  + **Security Concerns:** REST APIs rely on HTTP, which can be less secure compared to other protocols like SOAP. 
+  + **Lack of Standardization:** While REST is a set of guidelines, it doesn’t enforce strict standards. This can lead to inconsistencies in how APIs
+
+  _Exmaple:_
+  _Security Concerns:_ For example, if an API does not use HTTPS, sensitive data like user credentials can be intercepted.
+  _Lack of Standardization:_ For instance, one API might use PUT for updates, while another uses PATCH.
+</details>
+
 ### Difference between PUT and POST
 
 <details>
