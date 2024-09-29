@@ -245,10 +245,14 @@ public class GoldController {
   When we separate read and write databases in 2 different database, the main consideration is sync these two database in a proper way. So we should sync these 2 databases and keep sync always. There are several ways: 
 
   _Event-Driven Architecture_
-  According to Event Driven Architecture, when something update in write database, it will publish an update event with using message broker systems and this will consume by the read database and sync data according to latest changes.
+  **Concept:** Use a messaging system like Apache Kafka or RabbitMQ to propagate changes.
+  **Synchronization:** When a write operation occurs, an event is published to a message broker. The read database subscribes to these events and updates itself accordingly. Tools like Debezium can monitor the write database for changes and apply these changes to the read database in real-time.
 
-  _Change Data Capture (CDC)_
-  Captures changes made to the write database and propagates them to the read database. Tools like Debezium or database triggers can be used to capture changes and publish them to a message broker like Kafka.
+  _Event Sourcing_
+  + **Core Principle:** Instead of directly updating the database, CQRS systems using event sourcing store a sequence of events that represent changes to the system's state.
+  + **Synchronization:**
+    + The system maintains an event stream that records all events that occur.
+    + When an event occurs, it is broadcast to event handlers that update the appropriate read models (views) in the read database.
 
 </details>
 
