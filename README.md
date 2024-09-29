@@ -461,11 +461,21 @@ public class GoldController {
   <br/>
 
   The AWS API Gateway has a payload size limit of 10 MB. If the payload exceeds 10MB, API Gateway may reject the request and return an error (_“Error 413 Request entity too large”_). However, there are effective strategies to handle this:
+  
+  **Lambda Function with Presigned URLs**
+
+  We can use lambda function to generate the **presigned URLs** to upload file directly to S3.
+
+  Presigned URLs allow you to grant temporary access to objects in your Amazon S3 bucket without exposing your AWS credentials. These URLs are time-limited and can be used to upload or download files securely.
+
+  1. The client requests a presigned URL from your API.
+  2. The request is routed to the API Gateway, which triggers the Lambda function.
+  3. The Lambda function generates a presigned URL using the AWS SDK.
+  4. The presigned URL is returned to the client.
+  5. The client uses the presigned URL to upload or download the file.
+
+  _Note:_ We also use S3 accelerator + multipart file upload to optimize uploading performance.
 
   **Upload zipped file as the payload**
-
-  **Using S3 Presigned URLs**
   
-  **Direct Integration with S3**
-
 </details>
