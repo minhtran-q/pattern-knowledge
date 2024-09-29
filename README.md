@@ -360,3 +360,20 @@ public class GoldController {
 ## Resilience
 ### Circuit Breaker
 ### Retry
+
+## Common experience design
+<details>
+  <summary>Design upload API</summary>
+  <br/>
+
+  **Step 1: Upload File**
+
+  + **Upload to a Temporary Location:** When the user uploads a file, store it in a temporary location in S3 (_file storage_). You can use a specific folder or prefix to differentiate these temporary files.
+  + **Generate a Unique Identifier:** Assign a unique identifier to each upload request. This will help in tracking and managing the files.
+
+  **Step 2: Confirm/Cancel the Upload Request**
+
+  + **Confirm Upload:** If the user confirms the upload, move the file from the temporary location to the final destination in S3 (_file storage_). This can be done using the `copyObject` method in S3 and then deleting the original file from the temporary location.
+  + **Cancel Upload:** If the user cancels the upload, simply delete the file from the temporary location in S3 using the `deleteObject` method.
+
+</details>
