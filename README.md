@@ -53,6 +53,19 @@ REST (Representational State Transfer) is an architectural style for designing n
 ### Rules to define REST API
 
 <details>
+  <summary>HTTP Methods</summary>
+  <br/>
+
+  + **GET:** Use `GET` requests to fetch data from the server without modifying it.
+  + **POST:** Use `POST` requests to create new resources.
+  + **PUT:** Use `PUT` requests to update an existing resource or create a resource if it does not exist.
+  + **DELETE:** Use `DELETE` requests to delete a resource.
+  + **PATCH:** Use `PATCH` requests to update a piece of resource.
+
+  _Note:_ And `GET`, `PUT`, `DELETE` should be idempotent.
+</details>
+
+<details>
   <summary>URL</summary>
   <br/>
 
