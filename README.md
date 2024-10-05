@@ -50,13 +50,30 @@ REST (Representational State Transfer) is an architectural style for designing n
   _Lack of Standardization:_ For instance, one API might use PUT for updates, while another uses PATCH.
 </details>
 
-### Rules to define Cruds
-
-
-### Difference between PUT and POST
+### Rules to define REST API
 
 <details>
-  <summary>Difference between boths</summary>
+  <summary>URL</summary>
+  <br/>
+
+</details>
+
+<details>
+  <summary>Path Parameter, Query Parameter, Request Body</summary>
+  <br/>
+
+</details>
+
+<details>
+  <summary>HTTP Status Code</summary>
+  <br/>
+
+</details>
+
+### HTTP methods
+
+<details>
+  <summary>Difference between PUT and POST</summary>
   <br/>
 
 The details differences are as follows:
