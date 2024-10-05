@@ -116,6 +116,26 @@ codes. For example:
 ### HTTP methods
 
 <details>
+  <summary>What is idempotency in REST?</summary>
+  <br/>
+
+  The idempotency means how many times the request is repeated, the outcome remains consistent.
+
+  The HTTP methods that are idempotent include `GET`, `PUT`, `DELETE`:
+  
+  + **GET:** Get a resource multiple times doesn't change its state.
+  + **PUT:** Updating a resource with the same data multiple times, the result is still the same state.
+  + **DELETE:** Deleting a resource multiple times has the same effect.
+
+  `POST` and `PATCH` are generally not idempotent;
+  + **POST:** Used to create new resources. Multiple POST requests can create multiple resources.
+  + **PATCH:** Repeating the same PATCH request can lead to different outcomes depending on the initial state of the resource.
+
+  **Importance of Idempotency:** The idempotency is crucial because that operations can be safely retried without causing any side effects.
+
+</details>
+
+<details>
   <summary>Difference between PUT and POST</summary>
   <br/>
 
