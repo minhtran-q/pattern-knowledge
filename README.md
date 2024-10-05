@@ -82,6 +82,22 @@ REST (Representational State Transfer) is an architectural style for designing n
   <summary>HTTP Status Code</summary>
   <br/>
 
+  Send the right HTTP Status Code in response.
+
+  + **2xx: Successful Responses**: The codes indicate that the request was successfully 
+    + **200 OK**: The request was successful, and the server returned the requested resource.
+    + **201 Created**: The request was successful, and a new resource was created as a result.
+    + **204 No Content**: The request was successful, but there is no content to return.
+  + **4xx: Client Error Responses**: The codes indicate that there was an error with the request made by the client.
+    + **400 Bad Request**: The server could not understand the request due to invalid syntax.
+    + **403 Forbidden:** The client does not have access rights to the content.
+    + **404 Not Found:** The server cannot find the requested resource.
+
+  To handle errors effectively, we need to implement exception handling that assigns the appropriate error
+codes. For example:
+  + 404 Not Found for EntityNotFoundException
+  + 400 Bad Request for IllegalArgumentException
+
 </details>
 
 ### HTTP methods
