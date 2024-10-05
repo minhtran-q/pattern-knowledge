@@ -65,8 +65,16 @@ REST (Representational State Transfer) is an architectural style for designing n
 </details>
 
 <details>
-  <summary>Path Parameter, Query Parameter, Request Body</summary>
+  <summary>Path Parameter, Query Parameter</summary>
   <br/>
+
+  **Path Parameters:** are used to identify specific resources. 
+  
+  _Example:_ we have user id is `123` then we should use path parameter for URL.
+
+  **Query Parameter:** are used to filter, sort, or paginate resources. They are appended to the end of the URL and follow a question mark (`?`).
+  
+  _Example:_ /users?sort=age&limit=10&page=2
 
 </details>
 
