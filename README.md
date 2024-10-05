@@ -56,6 +56,12 @@ REST (Representational State Transfer) is an architectural style for designing n
   <summary>URL</summary>
   <br/>
 
+  + **Use Nouns, Not Verbs:** URLs should represent resources (nouns) rather than actions (verbs). For example, use `/users`.
+  + **Use Plural Nouns:** Use plural nouns to represent collections of resources. For example, `/users`.
+  + **Hierarchical Structure:** Use a hierarchical structure to represent relationships between resources. For example, `/users/{userId}/orders` to represent orders for a specific user.
+  + **Query Parameters for Filtering:** Use query parameters to filter, sort, or paginate resources. For example, `/users?sort=asc&limit=10`
+  + **Versioning:** Include versioning in your URLs to manage changes over time. For example, `/v1/users`.
+
 </details>
 
 <details>
