@@ -69,7 +69,7 @@ REST (Representational State Transfer) is an architectural style for designing n
   <summary>URL</summary>
   <br/>
 
-  + **Use Nouns, Not Verbs:** URLs should represent resources (nouns) rather than actions (verbs). For example, use `/users`.
+  + **Use Nouns, Not Verbs:** URLs should use resources (nouns) rather than actions (verbs). For example, use `/users`.
   + **Use Plural Nouns:** Use plural nouns to represent collections of resources. For example, `/users`.
   + **Hierarchical Structure:** Use a hierarchical structure to represent relationships between resources. For example, `/users/{userId}/orders` to represent orders for a specific user.
   + **Query Parameters for Filtering:** Use query parameters to filter, sort, or paginate resources. For example, `/users?sort=asc&limit=10`
@@ -119,7 +119,7 @@ codes. For example:
   <summary>What is idempotency in REST?</summary>
   <br/>
 
-  The idempotency means how many times the request is repeated, the outcome remains consistent.
+  The idempotency means we can run the operation as many times as we want the outcome will be the same.
 
   The HTTP methods that are idempotent include `GET`, `PUT`, `DELETE`:
   
@@ -141,7 +141,7 @@ codes. For example:
 
 The details differences are as follows:
 
-|| PUT           | POST          |
+|                      | PUT                                                                         | POST                                                                               |
 | -------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Request Body:        | The PUT body contains the full updated data for the resource.               | POST body only includes data for the new resource.                                 |
 | URI Meaning:         | PUT uses the URI to directly identify the resource to update (e.g. user 1). | POST uses the URI to specify the collection where a new resource will be created.  |
