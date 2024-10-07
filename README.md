@@ -591,6 +591,22 @@ Each service can be developed, deployed, and scaled independently.
 
 ## API Gateway Architecture Pattern
 
+### Kong API Gateway
+
+<details>
+  <summary>About Kong API Gateway</summary>
+  <br/>
+
+  Kong is an open-source API gateway that is **built on top of Nginx**. Its primary purpose is to  manage, secure, and extend APIs and microservices.
+
+  Features of Kong API Gateway:
+  + **High Performance:** Leveraging Nginx and OpenResty, Kong can handle high traffic with low latency.
+  + **Security:** Provides security features such as rate limiting, IP restriction, OAuth2 authentication, and more.
+  + **API Management:** Tools for managing the entire API lifecycle, including versioning, monitoring, and documentation.
+  + **Extensibility:** Supports numerous plugins for authentication, security, traffic control, and analytics.
+  
+</details>
+
 ## Common experience design
 <details>
   <summary>Design upload API</summary>
