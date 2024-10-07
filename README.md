@@ -589,7 +589,7 @@ Each service can be developed, deployed, and scaled independently.
   
 </details>
 
-## API Gateway
+## API Gateway Architecture Pattern
 
 ## Common experience design
 <details>
