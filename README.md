@@ -589,6 +589,8 @@ Each service can be developed, deployed, and scaled independently.
   
 </details>
 
+## API Gateway
+
 ## Common experience design
 <details>
   <summary>Design upload API</summary>
