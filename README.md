@@ -510,6 +510,8 @@ Each service can be developed, deployed, and scaled independently.
 
 </details>
 
+### Outbox pattern
+
 ## Resilience
 
 <details>
