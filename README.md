@@ -113,6 +113,12 @@ codes. For example:
 
 </details>
 
+<details>
+  <summary>Idempotency key</summary>
+  <br/>
+
+</details>
+
 ### HTTP methods
 
 <details>
