@@ -117,14 +117,14 @@ codes. For example:
   <summary>Idempotency key</summary>
   <br/>
 
-  An idempotency key works by ensuring that a particular operation is performed only once, even if the same request is sent multiple times.
+  An idempotency key works by ensuring that a particular operation is performed only once, even if the same request is sent multiple times. Idempotency keys are particularly useful with `POST` & `PATCH` HTTP methods.
 
   + **Client Generates Key:** The client generates a unique idempotency key for the request. This key is usually a **UUID** or another unique identifier.
   + **Client Sends Request with Key:** The client sends the request to the server, including the idempotency key in the request headers or body.
   + **Server Checks Key:** Upon receiving the request, the server checks if the idempotency key has already been used. This involves looking up the key in a database or cache where previously processed keys are stored.
   + **Process or Retrieve Result:** If the key is new, the server processes the request as usual and stores the result along with the idempotency key. If the key exists, the server retrieves the stored result associated with that key and returns it, without reprocessing the request.
   + **Return Response:** The server returns the response to the client. If the request was processed for the first time, it returns the new result. If the request was a duplicate, it returns the previously stored result.
-  
+
 </details>
 
 ### HTTP methods
