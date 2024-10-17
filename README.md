@@ -525,6 +525,28 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 ### Outbox pattern
+<details>
+  <summary>What is Outbox pattern</summary>
+  <br/>
+  The Outbox Pattern is a design pattern commonly used in distributed systems to ensure reliable event delivery and to maintain data consistency between the application database and external message brokers (e.g., Kafka, RabbitMQ) or other services.
+
+  **How it works:**
+
+  The Outbox Pattern introduces an outbox table into the database. When an application makes a state change (like creating a new order), it stores the event in this outbox table instead of immediately sending the event to a message broker. This outbox table guarantees that the event is captured in the same transaction with the state change operation.
+
+  + When the application performs a business operation (e.g., creating an order), it writes both the application data (e.g., order record) and the event to the outbox table within a single database transaction.
+  + Since both the business operation and the outbox write happen in the same transaction, both are rolled back if there's a failure.
+  + There is a separate background process responsible for polling or scanning the outbox table to read new events.
+  + It reads these events and publishes them to an external system, such as a Kafka topic. Then background process marks the event as “processed” to avoid reprocessing.
+  + In case, external system (e.g., Kafka) is temporarily unavailable, the event remains in the outbox table until it is successfully delivered.
+
+</details>
+
+<details>
+  <summary>Issues and considerations</summary>
+  <br/>
+
+</details>
 
 
 ## Serverless
