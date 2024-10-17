@@ -526,6 +526,9 @@ Each service can be developed, deployed, and scaled independently.
 
 ### Outbox pattern
 
+
+## Serverless
+
 ## Resilience
 
 <details>
