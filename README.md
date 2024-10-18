@@ -543,11 +543,31 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 <details>
-  <summary>Issues and considerations</summary>
+  <summary>When use the Outbox Pattern</summary>
   <br/>
+  
+  **When to Use the Outbox Pattern**
+
+ + You need to maintain consistency between your database state and messages published to a message broker.
+ + Your system requires high reliability and cannot lose events or process duplicates.
 
 </details>
 
+<details>
+  <summary>Issues and considerations</summary>
+  <br/>
+
+  
+
+</details>
+
+<details>
+  <summary>Example Use Case</summary>
+  <br/>
+
+  
+
+</details>
 
 ## Serverless
 
