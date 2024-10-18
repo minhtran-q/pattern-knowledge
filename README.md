@@ -586,6 +586,13 @@ Each service can be developed, deployed, and scaled independently.
 
 </details>
 
+### Change Data Capture (CDC)
+
+<details>
+  <summary>About Debezium</summary>
+  <br/>
+</details>
+
 ## Serverless
 
 ## Resilience
