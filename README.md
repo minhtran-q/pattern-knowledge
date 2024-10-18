@@ -579,7 +579,10 @@ Each service can be developed, deployed, and scaled independently.
   <summary>Example Use Case</summary>
   <br/>
 
-  
+  In an e-commerce platform, you have a microservice-based architecture where orders are placed by customers and we need to ensure that these orders are processed correctly.
+
+  + The order data must be saved in the database, and the corresponding event (e.g., "Order Created") must be published to Kafka exactly once, without losing or duplicating messages.
+  + In case of system crashes or failures, the system must ensure no order data is lost, or order event is missed or sent multiple times.
 
 </details>
 
