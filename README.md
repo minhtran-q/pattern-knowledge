@@ -554,10 +554,24 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 <details>
-  <summary>Issues and considerations</summary>
+  <summary>Duplication issues in consumer</summary>
   <br/>
 
+  + Order Service inserts the order into the database.
+  + The order service stores an event related to the order in an "outbox" table.
+  + A Message Publisher reads the event from the outbox table and sends it to a message broker (like Kafka).
+  + The message is consumed by another microservice to process order.
+  + **If** Message Publisher sends the event to Kafka but crashes or encounters a network issue after sending, and before it can mark that event as "sent" in the outbox table.
+  + When restart, the publisher reads the event from the outbox table again (because it still shows as unsent) and republishes the event.
+  + So the consumer can consume the event twice and processes the order twice.
+
+  **Solution:**
+
+  _Store Processed Events/Transaction IDs:_
   
+  + When processing events, store a unique identifier (like a UUID) for each event.
+  + Before processing a new event, check if it has already been processed.
+  + If it has, you ignore the message.
 
 </details>
 
