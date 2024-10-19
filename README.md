@@ -694,6 +694,17 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 <details>
+  <summary>When should use API Gateway</summary>
+  <br/>
+
+  + **Microservices Architecture:** Use an API Gateway to simplify communication between clients and multiple microservices by providing a single entry point and routing requests.
+  + **Security and Access Control:** Handele authentication, authorization for all APIs, ensuring only authorized requests reach the backend services.
+  + **Rate Limiting and Traffic Control:** Prevent backend overload by controlling the rate of incoming requests.
+  + **Circuit Breaker:** Improve system resilience by implementing circuit breakers to stop forwarding requests to failing services.
+  
+</details>
+
+<details>
   <summary>API Gateway vs Reverse Proxy</summary>
   <br/>
 
