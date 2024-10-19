@@ -680,7 +680,16 @@ Each service can be developed, deployed, and scaled independently.
   <summary>What is API Gateway</summary>
   <br/>
 
-  
+  An API Gateway is a server that acts as an intermediary between clients (such as web browsers or mobile apps) and backend services or microservices. It manages and routes requests, handles authentication and applies other policies to ensure secure communication between the clients and the backend.
+
+  **Features of API Gateway**
+
+  + **Request Routing:** Routes incoming API requests to the appropriate backend service or microservice.
+  + **Authentication and Authorization**: Authenticate incoming API requests using tokens (JWT, OAuth, API keys, etc.).
+  + **Rate Limiting and Throttling**: Controls the rate of incoming requests from clients to prevent overloading of backend services. Applies rate limits per user, per IP, or per API to avoid Denial of Service (DoS).
+  + **Load Balancing:** Distributes incoming traffic evenly across multiple instances of backend services.
+  + **Caching:** Provides caching mechanisms to store frequently accessed API responses and serve them quickly without hitting the backend.
+  + **Versioning:** Supports API versioning to manage backward compatibility, allowing clients to specify the version of the API they are using.
   
 </details>
 
