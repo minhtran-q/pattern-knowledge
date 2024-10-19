@@ -674,7 +674,15 @@ Each service can be developed, deployed, and scaled independently.
   
 </details>
 
-## API Gateway Architecture Pattern
+## API Gateway Pattern
+
+<details>
+  <summary>What is API Gateway</summary>
+  <br/>
+
+  
+  
+</details>
 
 ### Kong API Gateway
 
