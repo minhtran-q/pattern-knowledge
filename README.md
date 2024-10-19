@@ -676,6 +676,19 @@ Each service can be developed, deployed, and scaled independently.
 
 ## Webhook Pattern
 
+### Exposing API for webhook integration
+
+<details>
+  <summary>Security for webhook integration API</summary>
+  <br/>
+  
+</details>
+<details>
+  <summary>Avoid losing events from webhook integration</summary>
+  <br/>
+  
+</details>
+
 ## API Gateway Pattern
 
 <details>
