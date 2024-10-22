@@ -776,6 +776,13 @@ Each service can be developed, deployed, and scaled independently.
 
 </details>
 
+### Token-Based Authentication with OAuth2 and JWT
+
+<details>
+  <summary>Authentication with API Gateway</summary>
+  <br/>
+
+</details>
 
 ### Kong API Gateway
 
