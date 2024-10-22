@@ -752,6 +752,12 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 <details>
+  <summary>Authentication with API Gateway</summary>
+  <br/>
+
+</details>
+
+<details>
   <summary>API Gateway vs Reverse Proxy</summary>
   <br/>
 
