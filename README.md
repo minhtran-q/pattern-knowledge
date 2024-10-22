@@ -692,6 +692,12 @@ Each service can be developed, deployed, and scaled independently.
 <details>
   <summary>Security for webhook integration API</summary>
   <br/>
+
+  + **Rate Limiting:** Implement rate limiting on your webhook endpoint to prevent DDoS attacks.
+  + **Replay Protection:** To protect against replay attacks, you can use timestamps or unique request IDs. Store the request IDs or timestamps and reject duplicate request.
+  + **Authentication:** Require authentication for your webhook endpoint using mechanisms like API keys or OAuth.
+  + **IP Whitelisting:** Whitelist these IP addresses to ensure that your server only accepts requests from trusted sources.
+  + **Audit Logging:** Keep logs of the incoming requests to your webhook, including the source IP, headers, and payloads (if not sensitive)
   
 </details>
 <details>
