@@ -739,12 +739,6 @@ Each service can be developed, deployed, and scaled independently.
 </details>
 
 <details>
-  <summary>Authentication with API Gateway</summary>
-  <br/>
-
-</details>
-
-<details>
   <summary>API Gateway vs Reverse Proxy</summary>
   <br/>
 
@@ -768,6 +762,18 @@ Each service can be developed, deployed, and scaled independently.
 <details>
   <summary>Authentication with API Gateway</summary>
   <br/>
+
+  **Authentication step by step**
+
+  + The user attempts to access a protected resource, FE sends an HTTP request to the Kong API Gateway.
+  + The Kong API Gateway detects that there is no valid access token in the request and responds with a `302` (redirect) to the Keycloak Authorization Server.
+  + The user is redirected to the Keycloak login page. The URL includes: _Client ID_, _Redirect URI_, _Response Type_, _Scope_. `GET /auth/realms/myrealm/protocol/openid-connect/auth?client_id=myclient&redirect_uri=https://frontend-app/callback&response_type=code&scope=openid`.
+  + User enter their credentials (username/password) and authenticate.
+  + After a successful login, Keycloak redirects the user to the _redirect URI_ with the _Authorization Code_. `GET /callback?code=auth_code`
+  + The FE sends the Authorization Code to Keycloak’s token endpoint to exchange it for an _Access Token_ and an _ID Token_. (Include `client_id` & `client_secret`)
+  + The FE stores the Access Token () and includes it in the _Authorization header_ when making requests to the API via Kong.
+  + Kong is configured with the OIDC Plugin. Then it validates the token with Keycloak’s introspection endpoint.
+  + Once Kong has validated the token, it forwards the request to the upstream service.
 
 </details>
 
