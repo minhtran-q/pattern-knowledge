@@ -693,6 +693,7 @@ Each service can be developed, deployed, and scaled independently.
   <summary>Security for webhook integration API</summary>
   <br/>
 
+  + **Webhook Signature Validation:** Each webhook payload contains a signature in the headers that you can validate using a secret key.
   + **Rate Limiting:** Implement rate limiting on your webhook endpoint to prevent DDoS attacks.
   + **Replay Protection:** To protect against replay attacks, you can use timestamps or unique request IDs. Store the request IDs or timestamps and reject duplicate request.
   + **Authentication:** Require authentication for your webhook endpoint using mechanisms like API keys or OAuth.
