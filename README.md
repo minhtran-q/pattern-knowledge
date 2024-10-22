@@ -385,8 +385,24 @@ Each service can be developed, deployed, and scaled independently.
   <br/>
 
   Reliable communication between microservices ensures that messages are delivered accurately and timely, even in the face of failures or network issues. To archive **Reliable communication** we can use _messaging system_ like RabbitMQ, Apache Kafka. They aslo support **Idempotency**.
-   
   
+</details>
+
+<details>
+  <summary>Eventual Consistency vs Strong Consistency</summary>
+  <br/>
+
+  **Strong Consistency**
+  
+  Strong consistency ensures that any read operation will return the most recent write. As soon as data is written, it is immediately visible to all users or systems across all nodes in the distributed system.
+
+  _From example:_
+  Relational Databases with ACID properties (SQL Databases): Traditional relational databases like PostgreSQL or MySQL offer strong consistency by ensuring that transactions follow ACID principles.
+
+  **Eventual Consistency**
+
+  Eventual consistency allows updates to propagate to all nodes eventually, but there is no guarantee that they will be visible immediately to all readers.
+
 </details>
 
 ### Command Query Responsibility Segregation (CQRS) Pattern
@@ -517,11 +533,6 @@ Each service can be developed, deployed, and scaled independently.
 
   **Eventual Consistency:** Ensures that the system will eventually reach a consistent state, but not necessarily immediately.
   **Asynchronous:** Transactions are processed asynchronously, which can improve system availability and reduce blocking.
-</details>
-<details>
-  <summary>Eventual Consistency vs Strong Consistency</summary>
-  <br/>
-
 </details>
 
 ### Outbox pattern
