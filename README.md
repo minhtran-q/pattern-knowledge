@@ -695,6 +695,20 @@ Each service can be developed, deployed, and scaled independently.
   
 </details>
 <details>
+  <summary>Webhook Signature Validation</summary>
+  <br/>
+
+  Webhook signature validation is essential to verify that the incoming requests
+
+  _Step-by-Step:_
+
+  + **Retrieve Webhook Secret:** A secret (shared key) is typically provided by the service sending the webhook, it used to validate the incoming request signature.
+  + **Extract Signature from Headers:** When a webhook request is received. We'll need to extract this signature from the request headers.
+  + **Generate a Signature Using the Payload and Secret:** Using the payload and your webhook secret, generate an HMAC signature - `HMAC-SHA256` (Hash-based Message Authentication Code) signature.
+  + **Compare the Generated Signature with the Received Signature:** If they match, the request is valid.
+  
+</details>
+<details>
   <summary>Avoid losing events from webhook integration</summary>
   <br/>
   
