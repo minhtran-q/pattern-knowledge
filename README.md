@@ -771,9 +771,14 @@ Each service can be developed, deployed, and scaled independently.
   + User enter their credentials (username/password) and authenticate.
   + After a successful login, Keycloak redirects the user to the _redirect URI_ with the _Authorization Code_. `GET /callback?code=auth_code`
   + The FE sends the Authorization Code to Keycloak’s token endpoint to exchange it for an _Access Token_ and an _ID Token_. (Include `client_id` & `client_secret`)
-  + The FE stores the Access Token () and includes it in the _Authorization header_ when making requests to the API via Kong.
+  + The FE stores the Access Token (`in-memory storage`) and includes it in the _Authorization header_ when making requests to the API via Kong.
   + Kong is configured with the OIDC Plugin. Then it validates the token with Keycloak’s introspection endpoint.
   + Once Kong has validated the token, it forwards the request to the upstream service.
+
+  **Refresh token**
+
+  + If the Access Token expires, the user will need to refresh it.
+  + The frontend should have obtained a Refresh Token (store in `httpOnly secure cookies`).
 
 </details>
 
