@@ -250,19 +250,6 @@ public class GoldController {
 
 </details>
 
-### Additional Methods
-<details>
-  <summary>Additional HTTP Method</summary>
-  <br/>
-
-| HTTP Method           | Description          |
-| --------------------- | -------------------- |
-| PATCH                 | Updates a part of an existing resource. Not idempotent.                 |
-| HEAD.                 | Similar to GET, but only returns the header information, not the body.  |
-| OPTIONS               | Used to determine the supported methods and options for a resource.     |
-
-</details>
-
 ### Additional tips when creating APIs
 
 <details>
