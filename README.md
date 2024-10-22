@@ -280,6 +280,60 @@ public class GoldController {
   ```
 </details>
 
+### OpenAPI Specification
+
+<details>
+  <summary>OpenAPI Specification vs Swagger</summary>
+  <br/>
+
+  **OpenAPI Specification:** The standardized way of describing APIs, focusing on defining API structure and behavior in a machine-readable format.
+  **Swagger:** A toolset that helps users work with OpenAPI, providing tools like Swagger UI, Swagger Editor, and Swagger Codegen for designing, testing, and documenting APIs.
+
+</details>
+
+<details>
+  <summary>API First with OpenAPI Spec</summary>
+  <br/>
+
+  To implement an API-first approach using OpenAPI Specification with Spring Boot
+
+  + Create/update the OpenAPI Specification (openapi.yaml)
+  + Using OpenAPI Generator generate Spring Boot code from the specification (`openapi-generator generate -i openapi.yaml -g spring -o ./spring-boot-api`)
+
+  **Add OpenAPI Generator Maven Plugin**
+
+  ```
+  <build>
+    <plugins>
+        <!-- OpenAPI Generator Maven Plugin -->
+        <plugin>
+            <groupId>org.openapitools</groupId>
+            <artifactId>openapi-generator-maven-plugin</artifactId>
+            <version>6.0.0</version> <!-- Make sure to use the latest version -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec>
+                        <output>${project.build.directory}/generated-sources/openapi</output>
+                        <generatorName>spring</generatorName>
+                        <apiPackage>com.example.api</apiPackage>
+                        <modelPackage>com.example.model</modelPackage>
+                        <configOptions>
+                            <dateLibrary>java8</dateLibrary>
+                        </configOptions>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+  </build>
+  ```
+  
+</details>
+
 ## Microservice Architecture
 ### Fundamental concept
 <details>
