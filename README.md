@@ -346,7 +346,17 @@ public class GoldController {
 <details>
   <summary>Code First with OpenAPI Spec</summary>
   <br/>
-  
+
+  In a code-first approach for API development (as opposed to API-first), you first write the code for your Spring Boot API and then generate the OpenAPI Specification.
+
+  + Add Dependencies
+  ```
+  <dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.7.0</version> <!-- Use the latest version -->
+  </dependency>
+  ```
 </details>
 
 ## Microservice Architecture
