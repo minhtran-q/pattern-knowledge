@@ -331,6 +331,21 @@ public class GoldController {
     </plugins>
   </build>
   ```
+  **Expose Swagger UI**
+  ```
+  <dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.7.0</version>
+  </dependency>
+  ```
+
+  `http://localhost:8080/swagger-ui.html`
+</details>
+
+<details>
+  <summary>Code First with OpenAPI Spec</summary>
+  <br/>
   
 </details>
 
