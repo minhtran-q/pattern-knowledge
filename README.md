@@ -133,7 +133,7 @@ codes. For example:
   <summary>What is idempotency in REST?</summary>
   <br/>
 
-  The idempotency means we can run the operation as many times as we want the outcome will be the same.
+  The idempotency means an HTTP method where making the same request multiple times results in the same outcome as making it just once.
 
   The HTTP methods that are idempotent include `GET`, `PUT`, `DELETE`:
   
