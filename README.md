@@ -46,8 +46,8 @@ REST (Representational State Transfer) is an architectural style for designing n
   + **Lack of Standardization:** While REST is a set of guidelines, it doesn’t enforce strict standards. This can lead to inconsistencies in how APIs
 
   _Exmaple:_
-  _Security Concerns:_ For example, if an API does not use HTTPS, sensitive data like user credentials can be intercepted.
-  _Lack of Standardization:_ For instance, one API might use PUT for updates, while another uses PATCH.
+  + _Security Concerns:_ For example, if an API does not use HTTPS, sensitive data like user credentials can be intercepted.
+  + _Lack of Standardization:_ For instance, one API might use PUT for updates, while another uses PATCH.
 </details>
 
 ### Rules to define REST API
